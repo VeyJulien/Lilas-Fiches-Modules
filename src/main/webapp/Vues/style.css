@@ -359,3 +359,46 @@ input::-webkit-input-placeholder
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+/* ----- accordion ----- */
+
+.accordion
+{
+    width:100%;
+    font-size:14px;
+    border:none;
+    background-color: #ff5c6a;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
+    margin-top:10px;
+    font-weight:bold;
+    text-align:left;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.accordion:hover
+{
+    background-color:rgb(73,73,76);
+}
+
+.accordion:hover + .icon_accordion
+{
+    animation-name: accordion_anim;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    
+}
+
+.icon_accordion
+{
+    color: white;
+    margin-top: 17px;
+    margin-left: -27px;
+}
+
+@keyframes accordion_anim {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
+}
