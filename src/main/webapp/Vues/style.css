@@ -47,6 +47,11 @@ input::-webkit-input-placeholder
     text-align: center;
 }
 
+.title_page
+{
+    margin-left: 17%;
+}
+
 .main_block
 {
     margin:10%;
@@ -113,7 +118,7 @@ input::-webkit-input-placeholder
 }
 
 
-/*MENU page*/
+/*  ----- MENU page ----- */
 
 .page
 {
@@ -142,22 +147,22 @@ input::-webkit-input-placeholder
 
 .button_menu
 {
-    border:none;
-    color:white;
+    border: none;
+    color: white;
     background-color: rgb(73,73,76);
     font-family: "Poppins", Times, serif;
-    border-top:1px solid rgba(255,255,255,0.1);
-    cursor:pointer;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
     transition: 0.2s;
-    font-size:18px;
-    text-align:left;
-    padding-left:20px;
-    outline:none;
-    margin-bottom: -32px;
-    
-    padding-top:10px;
-    padding-bottom:10px;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    outline: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -40px;
 }
+
 
 .link_button
 {
@@ -165,9 +170,15 @@ input::-webkit-input-placeholder
     cursor:pointer;
 }
 
+.link_button:visited
+{
+    color:white;
+}
+
 .button_menu:hover
 {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.2);
+    border-left:7px solid #ff5c6a;
 }
 
 .menu_select
@@ -179,6 +190,7 @@ input::-webkit-input-placeholder
 .button_list
 {
     margin-top:50px;
+    list-style-type: none;
 }
 
 .page
@@ -214,14 +226,136 @@ input::-webkit-input-placeholder
     font-weight:bold;
 }
 
+@keyframes dring {
+    0%   {transform: rotate(25deg);}
+    25%  {transform: rotate(-25deg);}
+    50%  {transform: rotate(25deg);}
+    75%  {transform: rotate(-25deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.bell_anim
+{
+    animation-name: dring;
+    animation-duration: 0.7s;
+}
+
 .bell
 {
     border-radius: 50%;
     font-size: 40px;
-    padding: 0px 17px 0px 17px;
+    padding: 0px 17px 0px 16px;
     color: white;
     background-color: #ff5c6a;
     position: absolute;
     right: 130px;
     top: 110px;
+}
+
+.bullet_notif
+{
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 1px 6px 0px 5px;
+    background-color: rgb(73,73,76);
+    position: absolute;
+    right: 20px;
+    top: 136px;
+}
+
+.find_page
+{
+    margin-left:4%;
+    margin-right:4%;
+}
+
+.search_bar
+{
+    background-color:white;
+    border-radius: 10px;
+    padding-left:15px;
+    border:none;
+}
+
+.search_bar:focus
+{
+    border:none;
+}
+
+.icon_search
+{
+    margin-top: 14px;
+    margin-left: -36px;
+}
+
+/* ----- checkboxs ----- */
+
+/* The container */
+.container_check 
+{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top:7px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius:8px;
+}
+
+/* On mouse-over, add a grey background color */
+.container_check:hover input ~ .checkmark {
+    background-color: rgb(73,73,76);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_check input:checked ~ .checkmark {
+    background-color: #ff5c6a;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
