@@ -2,10 +2,10 @@ body
 {   
     font-family: "Poppins", Times, serif;
     
-    background-image:url(background.png);
+    background-image:linear-gradient(90deg, rgba(213,0,125,0.8), rgba(229,57,53,0.8));
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-repeat: repeat-y;
+    background-position: center;
     background-size: cover;
     
     font-size:20px;
@@ -49,13 +49,18 @@ input::-webkit-input-placeholder
 .main_block
 {
     margin:10%;
+    margin-top:50px;
     background-color: white;
     opacity: 0.9;
     border-radius: 30px;
     padding-top: 20px;
     padding-bottom:50px;
-    padding-left:15%;
-    padding-right:15%;
+}
+
+.login_form
+{
+    padding-left:17%;
+    padding-right:17%;
 }
 
 .submit_button
@@ -118,12 +123,13 @@ input::-webkit-input-placeholder
 .lateral_menu
 {
     width:20%;
-    height:600px;
-    background-color: white;
+    height:542px;
+    background-color: rgb(73,73,76);
+    color:white;
     position:absolute;
-    margin-left:10%;
-    margin-top:-270px;
+    margin-top:-492px;
     border-radius: 20px 0px 0px 20px;
+    min-width: 157px;
 }
 
 .menu_title
@@ -136,14 +142,26 @@ input::-webkit-input-placeholder
 .button_menu
 {
     border:none;
-    width:100%;
+    color:white;
+    background-color: rgb(73,73,76);
     font-family: "Poppins", Times, serif;
-    border-top:1px solid rgba(0,0,0,0.1);
+    border-top:1px solid rgba(255,255,255,0.1);
     cursor:pointer;
     transition: 0.2s;
     font-size:18px;
     text-align:left;
     padding-left:20px;
+    outline:none;
+    margin-bottom: -32px;
+    
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.link_button
+{
+    text-decoration: none;
+    cursor:pointer;
 }
 
 .button_menu:hover
@@ -154,4 +172,24 @@ input::-webkit-input-placeholder
 .button_list
 {
     margin-top:50px;
+}
+
+.page
+{
+    height: 400px;
+    width: 71%;
+    margin-left: 27%;
+    background-color: purple;
+    opacity:0.3;
+}
+
+.info_menu
+{
+    font-style: italic;
+    font-size: 13px;
+    padding-left: 20px;
+    opacity:0.8;
+    position:absolute;
+    bottom: 0px;
+    line-height:16px;
 }
