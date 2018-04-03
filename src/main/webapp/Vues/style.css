@@ -107,17 +107,51 @@ input::-webkit-input-placeholder
     margin-top:11px;
 }
 
-#icon_login
+
+/*MENU page*/
+
+.page
 {
-    color: white;
-    margin-left: -105px;
-    margin-bottom: -2px;
-    transition:0.5s;
+    width:100%;
 }
 
-.submit_button:hover + #icon_login
+.lateral_menu
 {
-    color: #ff5c6a;
-    margin-left: -35px;
-    
+    width:20%;
+    height:600px;
+    background-color: white;
+    position:absolute;
+    margin-left:10%;
+    margin-top:-270px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.menu_title
+{
+    font-weight:bold;
+    text-align:center;
+    margin-top:40px;
+}
+
+.button_menu
+{
+    border:none;
+    width:100%;
+    font-family: "Poppins", Times, serif;
+    border-top:1px solid rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition: 0.2s;
+    font-size:18px;
+    text-align:left;
+    padding-left:20px;
+}
+
+.button_menu:hover
+{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.button_list
+{
+    margin-top:50px;
 }
