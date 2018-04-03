@@ -130,6 +130,7 @@ input::-webkit-input-placeholder
     margin-top:-492px;
     border-radius: 20px 0px 0px 20px;
     min-width: 157px;
+    border-right: 10px solid white;
 }
 
 .menu_title
@@ -167,6 +168,12 @@ input::-webkit-input-placeholder
 .button_menu:hover
 {
     background-color: rgba(0,0,0,0.1);
+}
+
+.menu_select
+{
+    background-color: #ff5c6a;
+    border-left:7px solid white;
 }
 
 .button_list
