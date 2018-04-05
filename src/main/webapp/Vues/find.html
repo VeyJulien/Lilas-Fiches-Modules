@@ -20,7 +20,12 @@
                         <span class="checkmark"></span>
                     </label>
                     
-                    <div style="display:flex;"><button class="accordion">Année 1</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
+                    <div style="display:flex;"><button type="button" class="accordion" onclick="display_block()">Année 1</button><i class="fas fa-angle-double-up icon_accordion a_1"></i></div>
+                    <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    
                     <div style="display:flex;"><button class="accordion">Année 2</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
                     <div style="display:flex;"><button class="accordion">Année 3</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
                  
@@ -34,9 +39,9 @@
                 <li class="button_menu"><a href="menu.html" class="link_button">Ma Page</a>
                 <span class="bullet_notif">0</span>
                 </li>
-                <li class="button_menu"><a href="#" class="link_button">Créer un module</a></li>
+                <li class="button_menu"><a href="create_module.html" class="link_button">Créer un module</a></li>
                 <li class="button_menu menu_select"><a href="find.html" class="link_button">Chercher un module</a></li>
-                <li class="button_menu"><a href="#" class="link_button">Créer un template</a></li>
+                <li class="button_menu"><a href="create_template.html" class="link_button">Créer un template</a></li>
                 <li class="button_menu" style="border-bottom:1px solid rgba(255,255,255,0.1);"><a href="index.html" class="link_button">Déconnexion</a></li>
             </ul>
             
@@ -50,3 +55,25 @@
     </div>
 </body>
 </html>
+
+<script>
+    
+    var anne_1_activation = false;
+    
+    function display_block()
+    { 
+        if(anne_1_activation == false)
+        {
+            document.getElementsByClassName("panel")[0].style.display = "block";
+            document.getElementsByClassName("a_1")[0].style.transform = "rotate(180deg)";
+            anne_1_activation = true;
+        }
+        else{
+            document.getElementsByClassName("panel")[0].style.display = "none";
+            document.getElementsByClassName("a_1")[0].style.transform = "rotate(0deg)";
+            anne_1_activation = false;
+        }
+    }
+    
+    
+</script>

@@ -323,11 +323,12 @@ input::-webkit-input-placeholder
     width: 25px;
     background-color: white;
     border-radius:8px;
+    transition: 0.2s;
 }
 
 /* On mouse-over, add a grey background color */
 .container_check:hover input ~ .checkmark {
-    background-color: rgb(73,73,76);
+    background-color: rgb(217,217,217);
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -376,6 +377,8 @@ input::-webkit-input-placeholder
     text-align:left;
     cursor:pointer;
     transition:0.2s;
+    
+    outline:none;
 }
 
 .accordion:hover
@@ -399,6 +402,21 @@ input::-webkit-input-placeholder
 }
 
 @keyframes accordion_anim {
-    0%   {transform: rotate(0deg);}
     100% {transform: rotate(180deg);}
+}
+
+.panel
+{
+    background-color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    margin-top: -5px;
+    border-radius: 0px 0px 10px 10px;
+    
+    display: none;
+    overflow: hidden;
+    
 }
