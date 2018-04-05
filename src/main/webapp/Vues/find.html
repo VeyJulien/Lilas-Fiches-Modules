@@ -20,14 +20,32 @@
                         <span class="checkmark"></span>
                     </label>
                     
-                    <div style="display:flex;"><button type="button" class="accordion" onclick="display_block()">Année 1</button><i class="fas fa-angle-double-up icon_accordion a_1"></i></div>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="menu_accordion">
+                        <div style="display:flex;"><button type="button" class="accordion" onclick="display_block_a_1()">Année 1</button><i class="fas fa-angle-double-up icon_accordion a_1"></i></div>
+                        <div class="panel">
+
+                            <div style="display:flex;"><button type="button" class="accordion" onclick="display_block_a_1_e()">Électronique</button><i class="fas fa-angle-double-up icon_accordion_2 a_1_e"></i></div>
+                            <div class="panel">
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                            </div>
+
+                            <div style="display:flex;"><button type="button" class="accordion" onclick="display_block_a_1_i()">Informatique</button><i class="fas fa-angle-double-up icon_accordion_2 a_1_i"></i></div>
+                            <div class="panel">
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                            </div>
+
+                        </div>
+                    
+                    
+                        <div style="display:flex;"><button class="accordion">Année 2</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
+                        
+                        <div style="display:flex;"><button class="accordion">Année 3</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
+                        
                     </div>
-                    
-                    
-                    <div style="display:flex;"><button class="accordion">Année 2</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
-                    <div style="display:flex;"><button class="accordion">Année 3</button><i class="fas fa-angle-double-up icon_accordion"></i></div>
                  
                 </form>
             </div>
@@ -59,8 +77,10 @@
 <script>
     
     var anne_1_activation = false;
+    var anne_1_e_activation = false;
+    var anne_1_i_activation = false;
     
-    function display_block()
+    function display_block_a_1()
     { 
         if(anne_1_activation == false)
         {
@@ -68,10 +88,43 @@
             document.getElementsByClassName("a_1")[0].style.transform = "rotate(180deg)";
             anne_1_activation = true;
         }
-        else{
+        else
+        {
             document.getElementsByClassName("panel")[0].style.display = "none";
             document.getElementsByClassName("a_1")[0].style.transform = "rotate(0deg)";
             anne_1_activation = false;
+        }
+    }
+    
+    function display_block_a_1_e()
+    { 
+        if(anne_1_e_activation == false)
+        {
+            document.getElementsByClassName("panel")[1].style.display = "block";
+            document.getElementsByClassName("a_1_e")[0].style.transform = "rotate(180deg)";
+            anne_1_e_activation = true;
+        }
+        else
+        {
+            document.getElementsByClassName("panel")[1].style.display = "none";
+            document.getElementsByClassName("a_1_e")[0].style.transform = "rotate(0deg)";
+            anne_1_e_activation = false;
+        }
+    }
+    
+    function display_block_a_1_i()
+    { 
+        if(anne_1_i_activation == false)
+        {
+            document.getElementsByClassName("panel")[2].style.display = "block";
+            document.getElementsByClassName("a_1_i")[0].style.transform = "rotate(180deg)";
+            anne_1_i_activation = true;
+        }
+        else
+        {
+            document.getElementsByClassName("panel")[2].style.display = "none";
+            document.getElementsByClassName("a_1_i")[0].style.transform = "rotate(0deg)";
+            anne_1_i_activation = false;
         }
     }
     

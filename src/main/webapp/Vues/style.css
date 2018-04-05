@@ -401,6 +401,13 @@ input::-webkit-input-placeholder
     margin-left: -27px;
 }
 
+.icon_accordion_2
+{
+    color: white;
+    margin-top: 20px;
+    margin-left: -22px;
+}
+
 @keyframes accordion_anim {
     100% {transform: rotate(180deg);}
 }
@@ -409,14 +416,20 @@ input::-webkit-input-placeholder
 {
     background-color: rgba(255,255,255,0.8);
     font-size: 14px;
+    padding-right: 10px;
     padding-left: 30px;
-    padding-right: 30px;
     padding-top: 8px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     margin-top: -5px;
     border-radius: 0px 0px 10px 10px;
     
     display: none;
     overflow: hidden;
     
+}
+
+.menu_accordion
+{
+    max-height: 340px;
+    overflow-y: scroll;
 }
