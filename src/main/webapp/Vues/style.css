@@ -433,3 +433,25 @@ input::-webkit-input-placeholder
     max-height: 340px;
     overflow-y: scroll;
 }
+
+.list_accordion
+{
+    border-bottom: 1px solid grey;
+    list-style-type: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.icon_module
+{
+    position: relative;
+    right:0px;
+    margin-right: 10px;
+    margin-top: 5px;
+    color:black;
+}
+
+.icon_module:hover
+{
+    color: #ff5c6a;
+}
