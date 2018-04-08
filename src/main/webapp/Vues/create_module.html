@@ -10,10 +10,26 @@
 </head>
 <body>
     <div class="background">
+        
+        <div id="overlay" onclick="off()">
+            <div>
+                <div class="overlay_text">Êtes-vous sûre de vouloir<br>vous déconnecter ?</div>
+                <div class="overlay_under_text">Tous les changements non enregistrés seront perdus.</div>
+                <div style="display:flex;" class="button_overlay"><a class="button_1">Rester</a><a href="index.html" class="button_1">Quitter</a></div>
+            </div>
+        </div>
+        
         <div class="main_block">
             <p class="title_project title_page">Module Creator</p>
             
             <div class="page">
+                <div class="step_name_container">
+                    <span class="step_name">Informations<br>générales</span>
+                    <span class="step_name unactive_text">Présentation<br>générale</span>
+                    <span class="step_name unactive_text">Objectifs<br>pédagogiques</span>
+                    <span class="step_name unactive_text">Modalités<br>pédagogiques</span>
+                </div>
+                
                 <div class="loadbar_container">
                     <span class="loadbar_round"></span>
                     <span class="loadbar_number">1</span>
@@ -45,7 +61,7 @@
                 <a href="create_module.html" class="link_button"><li class="button_menu menu_select">Créer un module</li></a>
                 <a href="find.html" class="link_button"><li class="button_menu">Chercher un module</li></a>
                 <a href="create_template.html" class="link_button"><li class="button_menu">Créer un template</li></a>
-                <a href="index.html" class="link_button"><li class="button_menu" style="border-bottom:1px solid rgba(255,255,255,0.1);">Déconnexion</li></a>
+                <a type="button" onclick="on()" class="link_button"><li class="button_menu" style="border-bottom:1px solid rgba(255,255,255,0.1);">Déconnexion</li></a>
             </ul>
             
             <div class="info_menu">
@@ -58,3 +74,15 @@
     </div>
 </body>
 </html>
+
+<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementsByClassName("main_block")[0].style.filter = "blur(7px)";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementsByClassName("main_block")[0].style.filter = "blur(0px)";
+}
+</script>
