@@ -540,7 +540,7 @@ input::-webkit-input-placeholder
 .loadbar_container
 {
     width: 100%;
-    height: 100px;
+    height: 55px;
     padding-top: 20px;
     
     display:flex;
@@ -646,6 +646,29 @@ input::-webkit-input-placeholder
     animation-delay: 0.8s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;  
+}
+
+/* ------- END animations ------- */
+
+.input_module_container
+{
+    border-radius: 18px;
+    background-color: white;
+    height: 75%;
+    margin-left: 8px;
+    padding: 20px;
+}
+
+.input_create_module
+{
+    background-color: white;
+}
+
+.check_module
+{
+    margin-top: 15px;
+    padding-left: 15px;
+    color: #ff5b6a;
 }
 
 /* ----- Buttons ----- */
