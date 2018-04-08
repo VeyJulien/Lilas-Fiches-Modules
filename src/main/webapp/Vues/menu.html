@@ -24,10 +24,22 @@
             <p class="title_project title_page">Module Creator</p>
             <div class="page">
                 <div class="notif_block">
-                    <span class="title_notif">Notifications (0)</span><br>
+                    <span class="title_notif">Notifications (1)</span><br>
                     <span class="bell"><i class="fas fa-bell bell_anim"></i></span>
                     <p style="margin-bottom: 0em;">Bienvenue,<br>
-                    Vous n'avez pas de nouvelles notifications.</p>
+                    Vous avez 1 nouvelle notification.</p>
+                </div>
+                
+                <div class="notifs_container">
+                    
+                    <div class="notif_block">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <span><span class="title_notif">De</span> : <span style="color:#ff5c6a;">L'équipe de développement</span></span><br>
+                        <span><span class="title_notif">Le</span> : <span style="color:#ff5c6a;">08/07/2018 à 18h32</span></span><br>
+                        
+                        <p style="margin-bottom: 0em;">Bienvenue !<br>Félicitation, ceci est votre première connection !<br> Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</p>
+                    </div>
+                
                 </div>
             </div>
         
@@ -35,7 +47,7 @@
             <div class="menu_title">Menu</div>
             
             <ul class="button_list">
-                <a href="menu.html" class="link_button"><li class="button_menu menu_select">Ma Page</li><span class="bullet_notif">0</span></a>
+                <a href="menu.html" class="link_button"><li class="button_menu menu_select">Ma Page</li><span class="bullet_notif">1</span></a>
                 <a href="create_module.html" class="link_button"><li class="button_menu">Créer un module</li></a>
                 <a href="find.html" class="link_button"><li class="button_menu">Chercher un module</li></a>
                 <a href="create_template.html" class="link_button"><li class="button_menu">Créer un template</li></a>
@@ -62,5 +74,18 @@ function on() {
 function off() {
     document.getElementById("overlay").style.display = "none";
     document.getElementsByClassName("main_block")[0].style.filter = "blur(0px)";
+}
+</script>
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
 }
 </script>
