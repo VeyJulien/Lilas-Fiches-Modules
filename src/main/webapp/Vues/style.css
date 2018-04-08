@@ -159,6 +159,14 @@ input::-webkit-input-placeholder
     -ms-transform: translate(-50%,-50%);
 }
 
+.cross_overlay
+{
+    color: rgba(255,255,255,0.9);
+    font-size: 20px;
+    padding: 20px;
+    float: right;
+}
+
 .page
 {
     width:100%;
@@ -568,6 +576,51 @@ input::-webkit-input-placeholder
 .step_name
 {
     width:100%;
+}
+
+/* ----- Animation Load bar ------ */
+
+@keyframes round_loadbar 
+{
+    0%   {opacity: 0.2;}
+    100% {opacity: 1;}
+}
+
+.play_round_loadbar
+{
+    animation-name: round_loadbar;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+}
+
+@keyframes line_loadbar 
+{
+    0%   {background-color: #d6d6d7;}
+    100% {background-color: #ff5c6a;}
+}
+
+.play_line_loadbar
+{
+    animation-name: line_loadbar;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes text_loadbar 
+{
+    0%   {color: #d6d6d7;}
+    100% {color: #ff5c6a;}
+}
+
+.play_text_loadbar
+{
+    animation-name: text_loadbar;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;  
 }
 
 /* ----- Buttons ----- */
