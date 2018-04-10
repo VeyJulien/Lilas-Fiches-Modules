@@ -62,16 +62,24 @@
                         <div style="display: flex; margin-bottom: 16px;"><input id="field_1" onchange="check_field_1()" class="input_create_module" placeholder="Entrez le nom de votre module"><i id="check_1" class="fas fa-check-circle check_module"></i></div>
                         
                         <label>Identifiant du module</label><i class="fas fa-circle oblig_field"></i>
-                        <div style="display: flex; margin-bottom: 16px;"><input class="input_create_module" placeholder="Entrez l'identifiant de votre module"><i class="fas fa-check-circle check_module"></i></div>
+                        <div style="display: flex; margin-bottom: 16px;"><input id="field_2" onchange="check_field_2()" class="input_create_module" placeholder="Entrez l'identifiant de votre module"><i id="check_2" class="fas fa-check-circle check_module"></i></div>
                         
-                        <label>Responsable du module</label><i class="fas fa-circle oblig_field"></i>
-                        <div style="display: flex; margin-bottom: 16px;"><input class="input_create_module" placeholder="Entrez le nom du responsable du module"><i class="fas fa-check-circle check_module"></i></div>
+                        <label>Responsable du module</label><i class="fas fa-circle oblig_field"></i><div style="display: flex; margin-bottom: 16px;"><input id="field_3" onchange="check_field_3()" class="input_create_module" placeholder="Entrez le nom du responsable du module"><i id="check_3" class="fas fa-check-circle check_module"></i></div>
                         
                         <label>Nombre de crédits ECTS</label><i class="fas fa-circle oblig_field"></i>
-                        <div style="display: flex; margin-bottom: 16px;"><i class="fas fa-plus-circle button_add"></i><i class="fas fa-minus-circle button_add"></i><input class="input_create_module" value="0" style="margin-left: 15px;"><i class="fas fa-check-circle check_module"></i></div>
+                        <div style="display: flex; margin-bottom: 16px;">
+                            <i type="button" onclick="add_field_4()" class="fas fa-plus-circle button_add"></i>
+                            <i type="button" onclick="remove_field_4()" class="fas fa-minus-circle button_add"></i>
+                            <input id="field_4" onchange="check_field_4()" class="input_create_module" value="0" style="margin-left: 15px;">
+                            <i id="check_4" class="fas fa-check-circle check_module"></i>
+                        </div>
                         
                         <label>Quantité de travail par élève</label><i class="fas fa-circle oblig_field"></i>
-                        <div style="display: flex; margin-bottom: 16px;"><i class="fas fa-plus-circle button_add"></i><i class="fas fa-minus-circle button_add"></i><input class="input_create_module" value="0" style="margin-left: 15px;"><i class="fas fa-check-circle check_module"></i></div>
+                        <div style="display: flex; margin-bottom: 16px;">
+                            <i type="button" onclick="add_field_5()" class="fas fa-plus-circle button_add"></i>
+                            <i type="button" onclick="remove_field_5()" class="fas fa-minus-circle button_add"></i>
+                            <input id="field_5" onchange="check_field_5()" class="input_create_module" value="0" style="margin-left: 15px;">
+                            <i id="check_5" class="fas fa-check-circle check_module"></i></div>
                         
                         <label>Travail par équipe</label><i class="fas fa-circle oblig_field"></i>
                         <div style="display: flex; margin-bottom: 16px;">
@@ -141,6 +149,114 @@ function check_field_1(){
         document.getElementById("check_1").style.color = "#ff5b6a";
         document.getElementById("field_1").style.color = "#ff5b6a";
     }
+}
+    
+function check_field_2(){
+    var object = document.getElementById("field_2").value;
+    
+    if (object == "")
+    {
+            document.getElementById("check_2").style.color = "#d6d6d7";
+        document.getElementById("field_2").style.color = "black";
+    }
+    else
+    {
+        document.getElementById("check_2").style.color = "#ff5b6a";
+        document.getElementById("field_2").style.color = "#ff5b6a";
+    }
+}
+    
+function check_field_3(){
+    var object = document.getElementById("field_3").value;
+    
+    if (object == "")
+    {
+            document.getElementById("check_3").style.color = "#d6d6d7";
+        document.getElementById("field_3").style.color = "black";
+    }
+    else
+    {
+        document.getElementById("check_3").style.color = "#ff5b6a";
+        document.getElementById("field_3").style.color = "#ff5b6a";
+    }
+}
+    
+function check_field_4(){
+    var object = document.getElementById("field_4").value;
+    
+    
+    if (isNaN(object) || object <= 0)
+    { 
+        document.getElementById("check_4").style.color = "#d6d6d7";
+        document.getElementById("field_4").style.color = "black";
+    }
+    else
+    { 
+        document.getElementById("check_4").style.color = "#ff5b6a";
+        document.getElementById("field_4").style.color = "#ff5b6a";
+    }
+}
+    
+function check_field_5(){
+    var object = document.getElementById("field_5").value;
+    
+    
+    if (isNaN(object) || object <= 0)
+    { 
+        document.getElementById("check_5").style.color = "#d6d6d7";
+        document.getElementById("field_5").style.color = "black";
+    }
+    else
+    { 
+        document.getElementById("check_5").style.color = "#ff5b6a";
+        document.getElementById("field_5").style.color = "#ff5b6a";
+    }
+}
+    
+function add_field_4(){
+    
+    var a = Number(document.getElementById("field_4").value);
+    var b = 1;
+    var c = 0;
+    c = a + b;
+    document.getElementById("field_4").value = c;
+    
+    check_field_4();
+    
+}
+    
+function remove_field_4(){
+    
+    var a = Number(document.getElementById("field_4").value);
+    var b = 1;
+    var c = 0;
+    c = a - b;
+    document.getElementById("field_4").value = c;
+    
+    check_field_4();
+}
+    
+function add_field_5(){
+    
+    var a = Number(document.getElementById("field_5").value);
+    var b = 1;
+    var c = 0;
+    c = a + b;
+    document.getElementById("field_5").value = c;
+    
+    check_field_5();
+    
+}
+    
+function remove_field_5(){
+    
+    var a = Number(document.getElementById("field_5").value);
+    var b = 1;
+    var c = 0;
+    c = a - b;
+    document.getElementById("field_5").value = c;
+    
+    check_field_5();
 }
 
 </script>
