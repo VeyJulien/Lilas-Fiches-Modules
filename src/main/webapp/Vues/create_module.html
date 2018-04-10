@@ -84,10 +84,12 @@
                         <label>Travail par équipe</label><i class="fas fa-circle oblig_field"></i>
                         <div style="display: flex; margin-bottom: 16px;">
                             
-                            <label class="container_check" style="margin-right: 30px;">Oui<input type="checkbox" style="width:0px;" checked>
+                            <label class="container_check" style="margin-right: 30px;">Oui
+                                <input onchange="check_box_field()" id="Mycheck_1" type="checkbox" style="width:0px;" checked>
                                 <span class="checkmark check_yesno"></span>
                             </label>
-                            <label class="container_check">Non<input type="checkbox" style="width:0px;">
+                            <label class="container_check">Non
+                                <input onchange="check_box_field_2()" id="Mycheck_2" type="checkbox" style="width:0px;">
                                 <span class="checkmark check_yesno"></span>
                             </label>
                         </div>
@@ -258,5 +260,34 @@ function remove_field_5(){
     
     check_field_5();
 }
+    
+function check_box_field(){
+    
+    var check = document.getElementById("Mycheck_1").checked;
+    
+    if (check == true)
+    {
+        document.getElementById("Mycheck_2").checked = false;
+    }
+    else
+    {
+        document.getElementById("Mycheck_2").checked = true;
+    }
+}
+    
+function check_box_field_2(){
+    
+    var check = document.getElementById("Mycheck_2").checked;
+    
+    if (check == true)
+    {
+        document.getElementById("Mycheck_1").checked = false;
+    }
+    else
+    {
+        document.getElementById("Mycheck_1").checked = true;
+    }
+}
+
 
 </script>
