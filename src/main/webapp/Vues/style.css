@@ -748,6 +748,24 @@ input::-webkit-input-placeholder
     display: none;
 }
 
+.textarea_module
+{
+    width: calc(100% - 20px);
+    outline:none; /*Supprime le rectangle de selection*/
+    height: 170px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 10px;
+    resize: none;
+    transition:0.2s;
+}
+
+.textarea_module:focus
+{
+    border: 1px solid #ff5b6a;
+}
+
 /* ----- Buttons ----- */
 
 .button_1
@@ -804,4 +822,8 @@ input::-webkit-input-placeholder
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(60,60,60); 
+}
+
+::spelling-error {
+  color: #ce4a55;
 }

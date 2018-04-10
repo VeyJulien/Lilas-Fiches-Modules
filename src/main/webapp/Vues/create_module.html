@@ -133,6 +133,11 @@
                         
                         <div id="step_2" style="margin-right: -700px; padding-left: 700px; display: none; transition: 1s; opacity: 1;">
                             
+                            <label>Présentation</label><i class="fas fa-circle oblig_field"></i>
+                            <div style="margin-bottom: 16px;">
+                                <textarea class="textarea_module" placeholder="Entrez une description détaillée de votre module"></textarea>
+                            </div>
+                            
                             <div style="display:flex; width:100%;">
                                 <input type="button" class="button_1 button_next" value="previous" style="margin-right: 46.5%;">
                                 <input type="button" class="button_1 button_next" value="next">
@@ -359,7 +364,7 @@ function press_next_step_1(){
     document.getElementById("step_1").style.marginLeft = "-700px";
     
     setTimeout(function(){ document.getElementById("step_1").style.display = "none";
-                           document.getElementById("step_2").style.display = "flex";}, 600);
+                           document.getElementById("step_2").style.display = "block";}, 600);
     
     setTimeout(function(){ document.getElementById("step_2").style.opacity = "1";
                            document.getElementById("step_2").style.marginRight = "0px";
