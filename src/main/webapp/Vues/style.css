@@ -36,7 +36,8 @@ input:focus::-webkit-input-placeholder
 
 input::-webkit-input-placeholder 
 {
-    color:black; /* Supprime le placeholder */
+    color:lightgrey; /* Supprime le placeholder */
+    font-weight:lighter;
 }
 
 .title_project
@@ -562,11 +563,24 @@ input::-webkit-input-placeholder
     margin-left: 6px;
 }
 
+.load_progress
+{
+    height: 3px;
+    width: 0%;
+    background-color: #ff5b6a;
+}
+
+.loadbar_line::before
+{
+    width: 22%;
+    background-color: red;
+}
+
 .loadbar_number
 {
     color: #ff5c6a;
     font-weight: bold;
-    margin-left: -15px;
+    margin-left: -14px;
     margin-top: -24px;
     font-size: 15px;
 }
@@ -647,8 +661,8 @@ input::-webkit-input-placeholder
 
 @keyframes round_loadbar 
 {
-    0%   {opacity: 0.2;}
-    100% {opacity: 1;}
+    0%   {border: 3px solid #d6d6d7;}
+    100% {border: 3px solid #ff5b6a;}
 }
 
 .play_round_loadbar
@@ -656,18 +670,19 @@ input::-webkit-input-placeholder
     animation-name: round_loadbar;
     animation-duration: 0.7s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes line_loadbar 
 {
-    0%   {background-color: #d6d6d7;}
-    100% {background-color: #ff5c6a;}
+    0%   {width: 0;}
+    100% {width: 100%;}
 }
 
 .play_line_loadbar
 {
     animation-name: line_loadbar;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-delay: 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;  
@@ -683,7 +698,16 @@ input::-webkit-input-placeholder
 {
     animation-name: text_loadbar;
     animation-duration: 1s;
-    animation-delay: 0.8s;
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;  
+}
+
+.play_text_loadbar_2
+{
+    animation-name: text_loadbar;
+    animation-duration: 1s;
+    animation-delay: 0s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;  
 }
@@ -697,7 +721,8 @@ input::-webkit-input-placeholder
     height: 75%;
     margin-left: 8px;
     padding: 20px;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .input_create_module

@@ -28,7 +28,7 @@
             <div class="page">
                 <div class="step_name_container">
                     <span class="step_name unactive_text play_text_loadbar">Informations<br>générales</span>
-                    <span class="step_name unactive_text">Présentation<br>générale</span>
+                    <span id="l_t_1" class="step_name unactive_text">Présentation<br>générale</span>
                     <span class="step_name unactive_text">Objectifs<br>pédagogiques</span>
                     <span class="step_name unactive_text">Modalités<br>pédagogiques</span>
                 </div>
@@ -36,19 +36,27 @@
                 <div class="loadbar_container">
                     <span class="loadbar_round play_round_loadbar"></span>
                     <span class="loadbar_number">1</span>
-                    <span class="loadbar_line unactive_line play_line_loadbar"></span>
+                    <div class="loadbar_line unactive_line">
+                        <div class="load_progress play_line_loadbar"></div>
+                    </div>
                     
-                    <span class="loadbar_round unactive_round"></span>
-                    <span class="loadbar_number unactive_text">2</span>
-                    <span class="loadbar_line unactive_line"></span>
+                    <span id="l_r_1" class="loadbar_round unactive_round"></span>
+                    <span id="l_n_1" class="loadbar_number unactive_text">2</span>
+                    <div class="loadbar_line unactive_line">
+                        <div id="l_p_1" class="load_progress"></div>
+                    </div>
                     
                     <span class="loadbar_round unactive_round"></span>
                     <span class="loadbar_number unactive_text">3</span>
-                    <span class="loadbar_line unactive_line"></span>
+                    <div class="loadbar_line unactive_line">
+                        <div class="load_progress"></div>
+                    </div>
                     
                     <span class="loadbar_round unactive_round"></span>
                     <span class="loadbar_number unactive_text">4</span>
-                    <span class="loadbar_line unactive_line"></span>
+                    <div class="loadbar_line unactive_line">
+                        <div class="load_progress"></div>
+                    </div>
                     
                     <span class="loadbar_round unactive_round"></span>
                     <span class="loadbar_number unactive_text">5</span>
@@ -123,10 +131,10 @@
                         
                         
                         
-                        <div id="step_2" style="display:none; transition: 1s;">
+                        <div id="step_2" style="margin-right: -700px; padding-left: 700px; display: none; transition: 1s; opacity: 1;">
                             
-                            <div style="display:flex;">
-                                <input type="button" class="button_1 button_next" value="previous">
+                            <div style="display:flex; width:100%;">
+                                <input type="button" class="button_1 button_next" value="previous" style="margin-right: 46.5%;">
                                 <input type="button" class="button_1 button_next" value="next">
                             </div>
                         
@@ -351,7 +359,17 @@ function press_next_step_1(){
     document.getElementById("step_1").style.marginLeft = "-700px";
     
     setTimeout(function(){ document.getElementById("step_1").style.display = "none";
-                           document.getElementById("step_2").style.display = "flex";
-                         }, 600);
+                           document.getElementById("step_2").style.display = "flex";}, 600);
+    
+    setTimeout(function(){ document.getElementById("step_2").style.opacity = "1";
+                           document.getElementById("step_2").style.marginRight = "0px";
+                           document.getElementById("step_2").style.paddingLeft = "0px";
+                           
+                           document.getElementById("l_r_1").classList.add("play_round_loadbar");
+                           document.getElementById("l_n_1").classList.add("play_text_loadbar_2");
+                           document.getElementById("l_p_1").classList.add("play_line_loadbar");
+                           document.getElementById("l_t_1").classList.add("play_text_loadbar");
+                         
+                         }, 610);
 }
 </script>
