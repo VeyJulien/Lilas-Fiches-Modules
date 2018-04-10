@@ -710,7 +710,17 @@ input::-webkit-input-placeholder
     margin-top: 18px;
     padding-left: 15px;
     color: #d6d6d7;
-    transition: 0.2s;
+    transition: 1s;
+}
+
+.ok_popup
+{
+    font-size: 14px;
+    color: #ff5b6a;
+    margin-top: 15px;
+    margin-left: 6px;
+    transition: 0.5s;
+    display: none;
 }
 
 /* ----- Buttons ----- */
