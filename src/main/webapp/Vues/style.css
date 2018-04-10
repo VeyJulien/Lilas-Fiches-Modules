@@ -3,11 +3,9 @@ body
     font-family: "Poppins", Times, serif;
     
     background-image:linear-gradient(90deg, rgba(213,0,125,0.8), rgba(229,57,53,0.8));
-    width: 100%;
     background-repeat: repeat-y;
     background-position: center;
     background-size: cover;
-    
     font-size:20px;
 }
 
@@ -299,8 +297,8 @@ input::-webkit-input-placeholder
     color: white;
     background-color: #ff5c6a;
     position: absolute;
-    right: 130px;
-    top: 110px;
+    margin-top: -67px;
+    margin-left: 51%;
 }
 
 .bullet_notif
@@ -308,7 +306,7 @@ input::-webkit-input-placeholder
     border-radius: 50%;
     font-size: 12px;
     font-weight: bold;
-    padding: 1px 7px 0px 6px;
+    padding: 2px 8px 1px 8px;
     background-color: rgb(73,73,76);
     position: absolute;
     right: 20px;
@@ -665,6 +663,7 @@ input::-webkit-input-placeholder
     height: 75%;
     margin-left: 8px;
     padding: 20px;
+    overflow: scroll;
 }
 
 .input_create_module
@@ -710,4 +709,29 @@ input::-webkit-input-placeholder
     left: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+}
+
+/* ------ Scroll Bar ------ */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(240,240,240, 0.5);
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #555; 
+    cursor:pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(60,60,60); 
 }
