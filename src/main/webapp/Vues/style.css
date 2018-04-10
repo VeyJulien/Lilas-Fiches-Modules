@@ -609,6 +609,40 @@ input::-webkit-input-placeholder
     padding-bottom: 3px;
 }
 
+.button_add
+{
+    color: #ff5b6a;
+    padding-top: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button_add:hover
+{
+    color: #ce4a55;
+}
+
+.check_yesno
+{
+    background-color: #d6d6d7;
+}
+
+.button_next 
+{
+    border:none !important;
+    padding: 10px !important;
+    cursor:pointer;
+    width:25%;
+    float:right;
+}
+
+.button_next
+{
+    margin-top: 0px !important;
+    padding-bottom: 10px !important;
+}
+
 /* ----- Animation Load bar ------ */
 
 @keyframes round_loadbar 
@@ -676,6 +710,7 @@ input::-webkit-input-placeholder
     margin-top: 18px;
     padding-left: 15px;
     color: #d6d6d7;
+    transition: 0.2s;
 }
 
 /* ----- Buttons ----- */
