@@ -140,7 +140,8 @@
                             </div>
                             
                             <div style="display:flex; width:100%;">
-                                <button class="button_1 button_previous" style="margin-right: 46.5%;"><span style="transition:0.5s; font-size:15px; padding-right: 20px;">Previous</span></button>
+                                
+                                <button type="button" onclick="press_previous_step_2()" class="button_1 button_previous" style="margin-right: 46.5%;"><span style="transition:0.5s; font-size:15px; padding-right: 20px;">Previous</span></button>
                                 
                                 <button class="button_1 button_next"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Next</span></button>
                             </div>
@@ -377,6 +378,23 @@ function press_next_step_1(){
                            document.getElementById("l_p_1").classList.add("play_line_loadbar");
                            document.getElementById("l_t_1").classList.add("play_text_loadbar");
                          
-                         }, 610);
+                         }, 630);
 }
+    
+function press_previous_step_2(){
+    
+    document.getElementById("step_2").style.display = "none";
+    document.getElementById("step_1").style.paddingRight = "0px";
+    document.getElementById("step_1").style.marginLeft = "0px";
+    document.getElementById("step_1").style.display = "block";
+    
+    setTimeout(function(){ document.getElementById("step_1").style.opacity = "1";}, 600);
+    
+    document.getElementById("l_r_1").classList.remove("play_round_loadbar");
+    document.getElementById("l_n_1").classList.remove("play_text_loadbar_2");
+    document.getElementById("l_p_1").classList.remove("play_line_loadbar");
+    document.getElementById("l_t_1").classList.remove("play_text_loadbar");
+
+}
+    
 </script>
