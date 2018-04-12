@@ -930,7 +930,7 @@ input::-webkit-input-placeholder
     text-align: center;
     color: #ff5b6a;
     
-    padding-top: 30px;
+    padding-top: 100px;
     opacity: 0;
 }
 
@@ -951,6 +951,7 @@ input::-webkit-input-placeholder
 
 .text_sucess
 {
+    margin-top: -10px;
     font-size:30px;
     text-align: center;
     color: #ff5b6a;
@@ -985,7 +986,6 @@ input::-webkit-input-placeholder
 {
     background-color: rgb(40,40,40);
     border: 1px solid #ff5b6a;
-    
 }
 
 .download_pdf:hover .icon_pdf
@@ -994,9 +994,45 @@ input::-webkit-input-placeholder
     color: #ff5b6a;
 }
 
+@keyframes download {
+    50% {margin-bottom: 5px;}
+    100% {margin-bottom: -2px;}
+}
+
+.download_pdf:hover .pd_2
+{
+    display:inline-block;
+    
+    animation-name: download;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+.download_pdf:hover .pd_1
+{
+    display:none;
+}
+
 .text_download
 {
     padding-left:10px;
     padding-right:10px;
     padding-top:7px;
+}
+
+.pd_2
+{
+    display: none;
+    color: #ff5b6a;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: -2px;
+}
+
+.size_download
+{
+    text-align: center;
+    font-size: 11px;
+    color: #969696;
+    margin-top: 5px;
 }
