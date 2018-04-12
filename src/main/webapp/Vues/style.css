@@ -1036,3 +1036,56 @@ input::-webkit-input-placeholder
     color: #969696;
     margin-top: 5px;
 }
+
+/* ------ Create a Template Page ------ */
+
+.list_template
+{
+    list-style-type: none;
+    padding-top: 30px;
+}
+
+.element_list_template
+{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    position:relative;
+    box-shadow: 0 0 0 6px white;
+    cursor:auto;
+
+}
+
+.menu_icon_template
+{
+    float:right;
+    color:grey;
+    font-size:30px;
+    margin-top: -30px;
+    padding-right: 10px;
+    cursor:-webkit-grab;
+}
+
+.menu_icon_template:active
+{
+    cursor:-webkit-grabbing;
+}
+
+.slip-reordering {
+  -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.02);
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.03);
+}
+
+.empty_space
+{
+    opacity:0.8;
+    background-color: #49494c;
+    color: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 10px;
+    position:relative;
+    border: 2px dashed rgba(255,255,255,0.2);
+    box-shadow: 0 0 0 4px #49494c;
+    margin-bottom: -54px;
+}
