@@ -929,6 +929,24 @@ input::-webkit-input-placeholder
     font-size:80px;
     text-align: center;
     color: #ff5b6a;
+    
+    padding-top: 30px;
+    opacity: 0;
+}
+
+@keyframes success_anim {
+    100% {
+        padding-top: 0px;
+        opacity: 1;
+        }
+}
+
+.play_success_anim
+{
+    animation-name: success_anim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .text_sucess
@@ -941,6 +959,7 @@ input::-webkit-input-placeholder
 .download_pdf
 {
     display: flex;
+    border: 1px solid white;
     width:25%;
     text-align: left;
     font-size: 12px;
@@ -959,11 +978,20 @@ input::-webkit-input-placeholder
     padding-right: 10px;
     padding-left: 10px;
     border-right: 1px solid white;
+    transition: 0.5s;
 }
 
 .download_pdf:hover
 {
     background-color: rgb(40,40,40);
+    border: 1px solid #ff5b6a;
+    
+}
+
+.download_pdf:hover .icon_pdf
+{
+    border-right: 1px solid #ff5b6a;
+    color: #ff5b6a;
 }
 
 .text_download
