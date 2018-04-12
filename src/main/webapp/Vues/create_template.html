@@ -8,6 +8,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="icon" href="icon_website.gif" type="image/gif" sizes="16x16">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 </head>
 <body>
@@ -28,16 +29,16 @@
             <div class="page">
                 
                 <ul class="list_template">
-                    <li class="empty_space">Vide</li>
+                    <li id="empty_1" class="empty_space">Vide</li>
                     <li id="box1" class="element_list_template"><div>Présentation</div><i type="button" onmousedown="move_block()"  class="fas fa-bars menu_icon_template"></i></li>
                     
-                    <li class="empty_space">Vide</li>
-                    <li id="box2" class="element_list_template"><div>Présentation générales</div><i class="fas fa-bars menu_icon_template"></i></li>
+                    <li id="empty_2" class="empty_space">Vide</li>
+                    <li id="box2" class="element_list_template"><div>Informations générales</div><i class="fas fa-bars menu_icon_template"></i></li>
                     
-                    <li class="empty_space">Vide</li>
+                    <li id="empty_3" class="empty_space">Vide</li>
                     <li id="box2" class="element_list_template"><div>Objectifs Pédagogiques</div><i class="fas fa-bars menu_icon_template"></i></li>
                     
-                    <li class="empty_space">Vide</li>
+                    <li id="empty_4" class="empty_space">Vide</li>
                     <li id="box2" class="element_list_template"><div>Modalités Pédagogiques</div><i class="fas fa-bars menu_icon_template"></i></li>
                 </ul>
                 
@@ -92,6 +93,7 @@ function move_block(){
     var bsDiv = document.getElementById("box1");
     
     var x, y;
+    var y_initial = 0;
     
 // On mousemove use event.clientX and event.clientY to set the location of the div to the location of the cursor:
     
@@ -101,10 +103,27 @@ function move_block(){
         
         y = y - 200;
         
-        if ( typeof x !== 'undefined' ){
+        if ( typeof x !== 'undefined' )
+        {
             /*bsDiv.style.left = x + "px";*/
             bsDiv.style.top = y + "px";
             bsDiv.style.cursor = "-webkit-grabbing";
+        }
+        
+        if(y > 50)
+        {
+            $(document).ready(function(){
+                
+                jQuery("#box2").prependTo(".list_template");
+                jQuery("#empty_2").prependTo(".list_template");
+
+            });
+        }
+        
+        if(y < 50)
+        {
+            jQuery("#box1").prependTo(".list_template");
+            jQuery("#empty_1").prependTo(".list_template");
         }
         
     }, false);
