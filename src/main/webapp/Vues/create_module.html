@@ -30,8 +30,8 @@
                 <div class="step_name_container">
                     <span class="step_name unactive_text play_text_loadbar">Informations<br>générales</span>
                     <span id="l_t_1" class="step_name unactive_text">Présentation<br>générale</span>
-                    <span class="step_name unactive_text">Objectifs<br>pédagogiques</span>
-                    <span class="step_name unactive_text">Modalités<br>pédagogiques</span>
+                    <span id="l_t_2" class="step_name unactive_text">Objectifs<br>pédagogiques</span>
+                    <span id="l_t_3" class="step_name unactive_text">Modalités<br>pédagogiques</span>
                 </div>
                 
                 <div class="loadbar_container">
@@ -47,16 +47,16 @@
                         <div id="l_p_1" class="load_progress"></div>
                     </div>
                     
-                    <span class="loadbar_round unactive_round"></span>
-                    <span class="loadbar_number unactive_text">3</span>
+                    <span id="l_r_2" class="loadbar_round unactive_round"></span>
+                    <span id="l_n_2" class="loadbar_number unactive_text">3</span>
                     <div class="loadbar_line unactive_line">
-                        <div class="load_progress"></div>
+                        <div id="l_p_2" class="load_progress"></div>
                     </div>
                     
-                    <span class="loadbar_round unactive_round"></span>
-                    <span class="loadbar_number unactive_text">4</span>
+                    <span id="l_r_3" class="loadbar_round unactive_round"></span>
+                    <span id="l_n_3" class="loadbar_number unactive_text">4</span>
                     <div class="loadbar_line unactive_line">
-                        <div class="load_progress"></div>
+                        <div id="l_p_3" class="load_progress"></div>
                     </div>
                     
                     <span class="loadbar_round unactive_round"></span>
@@ -125,7 +125,7 @@
                         <label>Mots Clefs</label><i class="fas fa-circle oblig_field"></i>
                         <div style="display: flex; margin-bottom: 16px;"><input class="input_create_module" placeholder="Ajouter un mot clef"><i class="fas fa-check-circle check_module"></i></div>
                         
-                        <button type="button" onclick="press_next_step_1()" class="button_1 button_next"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Next</span></button>
+                        <button type="button" onclick="press_next_step_1()" class="button_1 button_next"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Suivant</span></button>
                         
                         </div>
                         
@@ -141,9 +141,41 @@
                             
                             <div style="display:flex; width:100%;">
                                 
-                                <button type="button" onclick="press_previous_step_2()" class="button_1 button_previous" style="margin-right: 46.5%;"><span style="transition:0.5s; font-size:15px; padding-right: 20px;">Previous</span></button>
+                                <button type="button" onclick="press_previous_step_2()" class="button_1 button_previous" style="margin-right: 46.5%;"><span style="transition:0.5s; font-size:15px; padding-right: 20px;">Précédent</span></button>
                                 
-                                <button class="button_1 button_next"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Next</span></button>
+                                <button type="button" class="button_1 button_next" onclick="press_next_step_2()"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Suivant</span></button>
+                            </div>
+                        
+                        </div>
+                        
+                        <div id="step_3" style="margin-right: -700px; padding-left: 700px; display: none; transition: 1s; opacity: 1;">
+                            
+                            <label>Objectifs Pédagogiques</label><i class="fas fa-circle oblig_field"></i>
+                            <div style="margin-bottom: 16px;">
+                                <textarea class="textarea_module" placeholder="Entrez les différents objectifs pédagogiques de votre module"></textarea>
+                            </div>
+                            
+                            <div style="display:flex; width:100%;">
+                                
+                                <button type="button" onclick="press_previous_step_3()" class="button_1 button_previous" style="margin-right: 46.5%;"><span style="transition:0.5s; font-size:15px; padding-right: 20px;">Précédent</span></button>
+                                
+                                <button type="button" class="button_1 button_next" onclick="press_next_step_3()"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Suivant</span></button>
+                            </div>
+                        
+                        </div>
+                        
+                        <div id="step_4" style="margin-right: -700px; padding-left: 700px; display: none; transition: 1s; opacity: 1;">
+                            
+                            <label>Modalités Pédagogiques</label><i class="fas fa-circle oblig_field"></i>
+                            <div style="margin-bottom: 16px;">
+                                <textarea class="textarea_module" placeholder="Entrez les différents modalités pédagogiques de votre module"></textarea>
+                            </div>
+                            
+                            <div style="display:flex; width:100%;">
+                                
+                                <button type="button" onclick="press_previous_step_4()" class="button_1 button_previous" style="margin-right: 46.5%;"><span style="transition:0.5s; font-size:15px; padding-right: 20px;">Précédent</span></button>
+                                
+                                <button class="button_1 button_next"><span style="transition:0.5s; font-size:15px; padding-left: 20px;">Finaliser</span></button>
                             </div>
                         
                         </div>
@@ -394,6 +426,80 @@ function press_previous_step_2(){
     document.getElementById("l_n_1").classList.remove("play_text_loadbar_2");
     document.getElementById("l_p_1").classList.remove("play_line_loadbar");
     document.getElementById("l_t_1").classList.remove("play_text_loadbar");
+
+}
+
+function press_next_step_2(){
+    
+    document.getElementById("step_2").style.opacity = "0";
+    document.getElementById("step_2").style.paddingRight = "700px";
+    document.getElementById("step_2").style.marginLeft = "-700px";
+    
+    setTimeout(function(){ document.getElementById("step_2").style.display = "none";
+                           document.getElementById("step_3").style.display = "block";}, 600);
+    
+    setTimeout(function(){ document.getElementById("step_3").style.opacity = "1";
+                           document.getElementById("step_3").style.marginRight = "0px";
+                           document.getElementById("step_3").style.paddingLeft = "0px";
+                           
+                           document.getElementById("l_r_2").classList.add("play_round_loadbar");
+                           document.getElementById("l_n_2").classList.add("play_text_loadbar_2");
+                           document.getElementById("l_p_2").classList.add("play_line_loadbar");
+                           document.getElementById("l_t_2").classList.add("play_text_loadbar");
+                         
+                         }, 630);
+}
+    
+function press_previous_step_3(){
+    
+    document.getElementById("step_3").style.display = "none";
+    document.getElementById("step_2").style.paddingRight = "0px";
+    document.getElementById("step_2").style.marginLeft = "0px";
+    document.getElementById("step_2").style.display = "block";
+    
+    setTimeout(function(){ document.getElementById("step_2").style.opacity = "1";}, 600);
+    
+    document.getElementById("l_r_2").classList.remove("play_round_loadbar");
+    document.getElementById("l_n_2").classList.remove("play_text_loadbar_2");
+    document.getElementById("l_p_2").classList.remove("play_line_loadbar");
+    document.getElementById("l_t_2").classList.remove("play_text_loadbar");
+
+}
+    
+function press_next_step_3(){
+    
+    document.getElementById("step_3").style.opacity = "0";
+    document.getElementById("step_3").style.paddingRight = "700px";
+    document.getElementById("step_3").style.marginLeft = "-700px";
+    
+    setTimeout(function(){ document.getElementById("step_3").style.display = "none";
+                           document.getElementById("step_4").style.display = "block";}, 600);
+    
+    setTimeout(function(){ document.getElementById("step_4").style.opacity = "1";
+                           document.getElementById("step_4").style.marginRight = "0px";
+                           document.getElementById("step_4").style.paddingLeft = "0px";
+                           
+                           document.getElementById("l_r_3").classList.add("play_round_loadbar");
+                           document.getElementById("l_n_3").classList.add("play_text_loadbar_2");
+                           document.getElementById("l_p_3").classList.add("play_line_loadbar");
+                           document.getElementById("l_t_3").classList.add("play_text_loadbar");
+                         
+                         }, 630);
+}
+    
+function press_previous_step_4(){
+    
+    document.getElementById("step_4").style.display = "none";
+    document.getElementById("step_3").style.paddingRight = "0px";
+    document.getElementById("step_3").style.marginLeft = "0px";
+    document.getElementById("step_3").style.display = "block";
+    
+    setTimeout(function(){ document.getElementById("step_3").style.opacity = "1";}, 600);
+    
+    document.getElementById("l_r_3").classList.remove("play_round_loadbar");
+    document.getElementById("l_n_3").classList.remove("play_text_loadbar_2");
+    document.getElementById("l_p_3").classList.remove("play_line_loadbar");
+    document.getElementById("l_t_3").classList.remove("play_text_loadbar");
 
 }
     
