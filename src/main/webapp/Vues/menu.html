@@ -25,10 +25,16 @@
         
         <div class="main_block">
             <p class="title_project title_page">Module Creator</p>
-            <div class="page" style="overflow-y: overlay; overflow-x: hidden;">
+            <div class="page" style="overflow-y: overlay; overflow-x: hidden; padding-left: 5px;">
                 <div class="notif_block">
-                    <span class="title_notif">Notifications (1)</span><br>
+                    <div style="display:flex;">
+                        <span class="title_notif">Notifications (1)</span>
+                        <form method="get" action="send_notif.html">
+                            <button type="submit" class="edit_button">Rédiger un message</button>
+                        </form>
                     <span class="bell"><i class="fas fa-bell bell_anim"></i></span>
+                    </div>
+                    
                     <p style="margin-bottom: 0em;">Bienvenue,<br>
                     Vous avez 1 nouvelle notification.</p>
                 </div>
@@ -37,12 +43,14 @@
                     
                     <div class="notif_block">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                        <span><span class="title_notif">De</span> : <span style="color:#ff5c6a;">L'équipe de développement</span></span><button id="edit_1" type="button" onclick="edit_1()" class="edit_button">Éditer</button><button type="button" class="edit_button">Supprimer</button><br>
+                        <span>
+                            <span class="title_notif">De</span> : 
+                            <span style="color:#ff5c6a;">L'équipe de développement</span></span><button id="edit_1" type="button" onclick="edit_1()" class="edit_button"><i class="fas fa-pencil-alt"></i> Éditer</button><button type="button" class="edit_button"><i class="far fa-trash-alt"></i> Supprimer</button><br>
                         <span><span class="title_notif">Le</span> : <span style="color:#ff5c6a;">08/07/2018 à 18h32</span></span><br>
                         
                         <p id="message_1" style="margin-bottom: 0em;">Bienvenue !<br>Félicitation, ceci est votre première connection !<br> Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</p>
                         
-                        <textarea id="text_area_1" class="textarea_module edit_textarea">Bienvenue ! &#13;&#10;Félicitation, ceci est votre première connection !&#13;&#10;Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</textarea>
+                        <textarea id="text_area_1" rows="4" class="textarea_module edit_textarea">Bienvenue ! &#13;&#10;Félicitation, ceci est votre première connection !&#13;&#10;Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</textarea>
                     </div>
                 
                 </div>
@@ -119,7 +127,7 @@ function edit_1()
         document.getElementById("message_1").style.display = "block";
         document.getElementById("text_area_1").style.display = "none";
         document.getElementById("edit_1").classList.remove("update");
-        document.getElementById("edit_1").innerHTML = "Éditer";
+        document.getElementById("edit_1").innerHTML = "<i class=\"fas fa-pencil-alt\"></i> Éditer";
         is_editing = false;
     }
 }

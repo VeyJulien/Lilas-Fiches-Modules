@@ -299,8 +299,8 @@ input::-webkit-input-placeholder
     color: white;
     background-color: #ff5c6a;
     position: absolute;
-    margin-top: -67px;
-    margin-left: 51%;
+    top: 135px;
+    right: 140px;
 }
 
 .bullet_notif
@@ -892,7 +892,7 @@ input::-webkit-input-placeholder
 {
     width: calc(100% - 20px);
     outline:none; /*Supprime le rectangle de selection*/
-    height: 170px;
+    height: 100%;
     border: 1px solid lightgrey;
     border-radius: 10px;
     font-size: 12px;
@@ -1134,4 +1134,35 @@ input::-webkit-input-placeholder
     border: 2px dashed rgba(255,255,255,0.2);
     box-shadow: 0 0 0 4px #49494c;
     margin-bottom: -54px;
+}
+
+/* ------- Notif Page ------ */
+
+.send_textarea
+{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    outline: none;
+    height: 260px;
+    border: none;
+    font-size: 16px;
+    margin-left: 8px;
+    resize: none;
+    margin-top: 1em;
+    line-height: 41px;
+    background: linear-gradient(transparent, transparent 40px, #ededed 0px);
+    background-size: 30px 41px;
+    background-attachment: scroll;
+    transition: 0.2s;
+}
+
+.marg_send
+{
+    border-right: 2px solid lightgrey;
+    margin-top: 26px;
+    text-align: center;
+    padding-right: 10px;
+    line-height: 40px;
+    color:#ff5b6a;
 }
