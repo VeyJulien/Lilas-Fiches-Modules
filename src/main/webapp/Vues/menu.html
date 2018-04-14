@@ -5,6 +5,7 @@
     <title>Menu</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="icon" href="icon_website.gif" type="image/gif" sizes="16x16">
@@ -24,7 +25,7 @@
         
         <div class="main_block">
             <p class="title_project title_page">Module Creator</p>
-            <div class="page">
+            <div class="page" style="overflow-y: overlay; overflow-x: hidden;">
                 <div class="notif_block">
                     <span class="title_notif">Notifications (1)</span><br>
                     <span class="bell"><i class="fas fa-bell bell_anim"></i></span>
@@ -36,10 +37,12 @@
                     
                     <div class="notif_block">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                        <span><span class="title_notif">De</span> : <span style="color:#ff5c6a;">L'équipe de développement</span></span><br>
+                        <span><span class="title_notif">De</span> : <span style="color:#ff5c6a;">L'équipe de développement</span></span><button id="edit_1" type="button" onclick="edit_1()" class="edit_button">Éditer</button><button type="button" class="edit_button">Supprimer</button><br>
                         <span><span class="title_notif">Le</span> : <span style="color:#ff5c6a;">08/07/2018 à 18h32</span></span><br>
                         
-                        <p style="margin-bottom: 0em;">Bienvenue !<br>Félicitation, ceci est votre première connection !<br> Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</p>
+                        <p id="message_1" style="margin-bottom: 0em;">Bienvenue !<br>Félicitation, ceci est votre première connection !<br> Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</p>
+                        
+                        <textarea id="text_area_1" class="textarea_module edit_textarea">Bienvenue ! &#13;&#10;Félicitation, ceci est votre première connection !&#13;&#10;Nous vous souhaitons une agréable navigation, si vous rencontrez des difficultés n'hésitez pas à nous en faire part.</textarea>
                     </div>
                 
                 </div>
@@ -80,6 +83,9 @@ function off() {
 </script>
 
 <script>
+
+var is_editing = false;
+    
 var close = document.getElementsByClassName("closebtn");
 var i;
 
@@ -90,4 +96,32 @@ for (i = 0; i < close.length; i++) {
         setTimeout(function(){ div.style.display = "none"; }, 600);
     }
 }
+    
+function edit_1()
+{
+    if (is_editing == false)
+        {
+            document.getElementById("message_1").style.display = "none";
+            document.getElementById("text_area_1").style.display = "block";
+            document.getElementById("edit_1").classList.add("update");
+            document.getElementById("edit_1").innerHTML = "Enregistrer les modifications";
+            is_editing = true;
+        }
+    else
+    {
+        //Update
+        var text;
+        text = document.getElementById("text_area_1").value;
+        text = text.replace(/\n\r?/g, '<br />');
+        
+        document.getElementById("message_1").innerHTML = text;
+        
+        document.getElementById("message_1").style.display = "block";
+        document.getElementById("text_area_1").style.display = "none";
+        document.getElementById("edit_1").classList.remove("update");
+        document.getElementById("edit_1").innerHTML = "Éditer";
+        is_editing = false;
+    }
+}
+    
 </script>
