@@ -1166,3 +1166,120 @@ input::-webkit-input-placeholder
     line-height: 40px;
     color:#ff5b6a;
 }
+
+/* ------ 2nd create template ------ */
+
+.element_list_template2
+{
+    display:flex;
+    background-color: #49494c;
+    border-left: 15px solid #ff5b6a;
+    height: 70px;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: auto;
+    box-shadow:0 3px 15px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+        margin-right: 10px;
+}
+
+.count_template
+{
+    font-size: 43px;
+    font-weight: bold;
+    padding-right: 15px;
+    text-align: center;
+    padding-left: 10px;
+    margin-top: -10px;
+    padding-top: 10px;
+    margin-bottom: -10px;
+    border-right: 2px solid white;
+    margin-right: 10px;
+}
+
+.input_template
+{
+    background-color: #49494c;
+    color: white;
+    border-bottom: 2px solid lightgrey;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    outline: none;
+    font-size: 15px;
+    padding-bottom: 0px;
+    padding-top: 0px; 
+    transition: 0.6s;
+}
+
+.icon_selection_type
+{
+    color: #49494c;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+.icon_selection_type:hover
+{
+    background-color: rgb(255,255,255,0.7);
+}
+
+.icon_selection_type_active
+{
+    background-color: #ff5b6a;
+    color:white;
+}
+
+.icon_selection_type_active:hover
+{
+    background-color: #ff5b6a;
+}
+
+.arrow_container
+{
+    background-color: white;
+    color: #49494c;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    margin-top: -10px;
+    border-radius: 0px 10px 10px 0px;
+    width: 100px;
+    cursor:pointer;
+}
+
+.arrow_up_template
+{
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(73, 73, 76, 0.2);
+    border-radius: 0px 10px 0px 0px;
+    width: 100% !important;
+    padding-bottom: 15px;
+    transition:0.5s;
+}
+
+.arrow_up_template:hover
+{
+    background-color: rgba(73, 73, 76, 0.1);
+}
+
+.arrow_down_template
+{
+    padding-top: 10px;
+    margin-top: -9px;
+    width: 100% !important;
+    border-radius: 0px 0px 10px 0px;
+    padding-bottom: 15px;
+    transition:0.5s;
+}
+
+.arrow_down_template:hover
+{
+    background-color: rgba(73, 73, 76, 0.1);
+}
