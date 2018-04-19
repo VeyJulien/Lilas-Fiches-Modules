@@ -1360,6 +1360,11 @@ input::-webkit-input-placeholder
     background-color: #dadadb;
 }
 
+.element_menu_template_active
+{
+    background-color: #dadadb;
+}
+
 .save_template
 {
     color: white;
@@ -1375,4 +1380,35 @@ input::-webkit-input-placeholder
 .save_template:hover
 {
     opacity:0.7; 
+}
+
+.input_step_name
+{
+    width: 85%;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.label_input_step_name
+{
+    margin-left: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.add_field
+{
+    text-align: center;
+    color: #49494c;
+    opacity: 0.5;
+    font-size: 15px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition:0.5s;
+}
+
+.add_field:hover
+{
+    opacity:1;
 }
