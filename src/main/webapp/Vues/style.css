@@ -1089,6 +1089,7 @@ input::-webkit-input-placeholder
 {
     list-style-type: none;
     padding-top: 30px;
+    margin-top:0px;
 }
 
 .element_list_template
@@ -1330,4 +1331,48 @@ input::-webkit-input-placeholder
 .manage_field_icon_2:hover
 {
     opacity:1;
+}
+
+.menu_template
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    font-size: 14px;
+    overflow: hidden;
+    border-top: 1px solid #dadadb;
+    padding-top: 5px;
+}
+
+.element_menu_template
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #dadadb;
+    cursor: pointer;
+    float:left;
+    transition: 0.2s;
+}
+
+.element_menu_template:hover
+{
+    background-color: #dadadb;
+}
+
+.save_template
+{
+    color: white;
+    background-color: #ff5b6a;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    float: right;
+    cursor:pointer;
+    transition: 0.2s;
+}
+
+.save_template:hover
+{
+    opacity:0.7; 
 }
