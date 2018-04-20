@@ -55,8 +55,8 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
-                    
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
+                        
                     <li class="element_list_template2">
                         
                         <div style="padding-left: 18px;padding-right:18px;"class="count_template">1</div>
@@ -80,7 +80,7 @@
                         
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                         
                     <li class="element_list_template2">
                                             
@@ -105,7 +105,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                         
                     <li class="element_list_template2">
                                             
@@ -130,7 +130,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                             
                     <li class="element_list_template2">
                                             
@@ -155,7 +155,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                         
                     <li class="element_list_template2">
                                             
@@ -180,7 +180,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                         
                     <li class="element_list_template2">
                                             
@@ -205,7 +205,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                         
                     <li class="element_list_template2">
                                             
@@ -242,7 +242,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                     
                     <li class="element_list_template2">
                         
@@ -279,7 +279,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                     
                     <li class="element_list_template2">
                         
@@ -316,7 +316,7 @@
                     
                     <div style="display:flex;">
                     <i class="far fa-trash-alt manage_field_icon"></i>
-                    <i class="fas fa-eye manage_field_icon_2"></i>
+                    <i type="button" onclick="hide_element(this)" class="fas fa-eye manage_field_icon_2"></i>
                     
                     <li class="element_list_template2">
                         
@@ -433,6 +433,20 @@ function show_step_4()
         document.getElementById("menu_2").classList.remove("element_menu_template_active");
         document.getElementById("menu_3").classList.remove("element_menu_template_active");
         document.getElementById("menu_4").classList.add("element_menu_template_active");
+    }
+    
+function hide_element(current)
+    {
+        var element = current.nextElementSibling;
+        
+        if(element.style.opacity == 0.2)
+        {
+                element.style.opacity = "1";
+        }
+        else
+        {
+            element.style.opacity = "0.2";
+        }
     }
 
 </script>
