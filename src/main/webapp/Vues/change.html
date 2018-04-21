@@ -23,36 +23,26 @@
             </div>
         </div>
         
-        <div class="main_block">
-            <p class="title_project title_page">Module Creator</p>
-            <div class="page" style="overflow-y: overlay; overflow-x: hidden; padding-left: 5px;">
-                <div class="input_module_container" style="margin-left:2px; height: 90%;">
-                    <div>Rédiger une notification</div>
-                    
-                    <div style="display:flex;">
-                        <form method="get" action="menu.html">
-                            <button type="submit" class="edit_button" style="margin-left:0px;"><i class="far fa-paper-plane"></i> Envoyer</button>
-                        </form>
-
-                        <form method="get" action="menu.html">
-                            <button class="edit_button"><i class="fas fa-undo"></i> Retour à la page d'accueil</button>
-                        </form>
-                    </div>
-                    
-                    <div style="display:flex;">
-                        <div class="marg_send">1<br>2<br>3<br>4<br>5<br>6</div>
-                        <textarea rows="6" onkeydown="return limitLines(this, event)" class="send_textarea" autofocus></textarea>
-                    </div>
+        <div class="main_block" style="background-color:rgb(53,53,53);">
+            <p class="title_project title_page" style="color:white;">Module Creator</p>
+            
+            <div class="page">
+                <img src="coffee.gif" style="width: 30%; padding-right: 35%; padding-left: 35%;">
+                <div style="color: white; text-align: center;">Espace personnel</div>
+                <div style="    display: inline-flex; margin-left: 11%;">
+                    <a class="button_change_info">Changer le mot de passe</a>
+                    <a class="button_change_info">Gérer les admins</a>
+                    <a class="button_change_info">Conditions générales</a>
+                    <a class="button_change_info">À propos</a>
                 </div>
-                
             </div>
         
-        <div class="lateral_menu">
+        <div class="lateral_menu" style="border-right: 10px solid #6d6d6d">
             <div class="menu_title">Menu</div>
             <div class="statut_bullet">Administrateur</div>
             
             <ul class="button_list">
-                <a href="menu.html" class="link_button"><li class="button_menu menu_select">Ma Page</li><span class="bullet_notif">1</span></a>
+                <a href="menu.html" class="link_button"><li class="button_menu">Ma Page</li><span class="bullet_notif">1</span></a>
                 <a href="create_module.html" class="link_button"><li class="button_menu">Créer un module</li></a>
                 <a href="find.html" class="link_button"><li class="button_menu">Chercher un module</li></a>
                 <a href="create_template.html" class="link_button"><li class="button_menu">Créer un template</li></a>
