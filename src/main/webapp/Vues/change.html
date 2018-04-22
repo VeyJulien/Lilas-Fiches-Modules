@@ -29,12 +29,33 @@
             <div class="page">
                 <img src="coffee.gif" style="width: 30%; padding-right: 35%; padding-left: 35%;">
                 <div style="color: white; text-align: center;">Espace personnel</div>
-                <div style="    display: inline-flex; margin-left: 11%;">
-                    <a class="button_change_info">Changer le mot de passe</a>
-                    <a class="button_change_info">Gérer les admins</a>
-                    <a class="button_change_info">Conditions générales</a>
-                    <a class="button_change_info">À propos</a>
-                </div>
+                <ul class="nave_personnal_page">
+                    <li><a class="button_change_info button_change_info_selected">Changer le mot de passe</a></li>
+                    <li><a class="button_change_info">Gérer les admins</a></li>
+                    <li><a class="button_change_info">Conditions générales</a></li>
+                    <li><a class="button_change_info">À propos</a></li>
+                </ul>
+                
+                <form class="form_change_style">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:50%;"><label>Ancien mot de passe</label></td>
+                            <td style="width:50%;"><label>Confirmer votre nouveau mot de passe</label></td>
+                        </tr>
+                        <tr>
+                            <td><input class="input_change_form" type="password" value="motdepasse"></td>
+                            <td><input class="input_change_form"type="password"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Nouveau mot de passe</label></td>
+                            <td><label style="color: #6d6d6d;"><i class="fas fa-lightbulb"></i> Conseil : Une majuscule, un chiffre</label></td>
+                        </tr>
+                        <tr>
+                            <td><input class="input_change_form"type="password"></td>
+                            <td><input class="button_change_password" type="submit" value="Enregistrer"></td>
+                        </tr>
+                    </table> 
+                </form>
             </div>
         
         <div class="lateral_menu" style="border-right: 10px solid #6d6d6d">

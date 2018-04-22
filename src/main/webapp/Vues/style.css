@@ -1486,6 +1486,24 @@ input::-webkit-input-placeholder
 
 /* ------ Change Page ------ */
 
+.nave_personnal_page
+{
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.nave_personnal_page li
+{
+    display:inline;
+}
+.nave_personnal_page a
+{
+    display:inline-block;
+}
+
 .button_change_info
 {
     font-size: 11px;
@@ -1498,7 +1516,7 @@ input::-webkit-input-placeholder
     margin-top: 13px;
     background-color: rgba(255, 255, 255, 0.95);
     cursor: pointer;
-    margin-right: 15px;
+    margin-right: 5px;
     border: 2px solid #353535;
     transition: 0.5s;
 }
@@ -1507,4 +1525,72 @@ input::-webkit-input-placeholder
 {
     border: 2px solid #ff5b6a;
     color: #ff5b6a;
+}
+
+.button_change_info_selected
+{
+    border: 2px solid #ff5b6a;
+    color: #ff5b6a;
+}
+
+.form_change_style
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 137px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 13px;
+    overflow: auto;
+}
+
+.input_change_form
+{
+    font-size: 13px;
+    color: #f5f5f5;
+    background-color: rgb(109, 109, 109);
+    border-radius: 0px 7px 7px 0px;
+    border-left: 3px solid white;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    width: 90%;
+    border-bottom: 0px solid white;
+    transition:0.5s;
+}
+
+.input_change_form:focus
+{
+    border-bottom: 0px solid white;
+    border-left: 3px solid #ff5b6a;
+}
+
+.button_change_password
+{
+    box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    background-color: #ff5c6a;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px 5px 10px;
+    transition: 0.2s;
+    text-decoration: none;
+    border-bottom: 0px solid #ce4a55;
+    cursor:pointer;
+    width: 95%;
+    transition:0.5s;
+}
+
+.button_change_password:hover
+{
+    background-color: #ce4a55;
+}
+
+.button_change_password:focus
+{
+    border:none;
 }
