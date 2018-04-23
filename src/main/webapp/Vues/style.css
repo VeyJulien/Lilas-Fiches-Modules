@@ -1209,6 +1209,7 @@ input::-webkit-input-placeholder
     box-shadow:0 3px 15px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
     margin-right: 10px;
     width:100%;
+    transition:0.5s;
 }
 
 .count_template
