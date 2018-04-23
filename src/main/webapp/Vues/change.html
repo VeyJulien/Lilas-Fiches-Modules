@@ -27,7 +27,7 @@
             <p class="title_project title_page" style="color:white;">Module Creator</p>
             
             <div class="page">
-                <img src="coffee.gif" style="width: 30%; padding-right: 35%; padding-left: 35%;">
+                <img id="coffee_img" src="coffee.gif" style="width: 30%; padding-right: 35%; padding-left: 35%; transition: 1s;">
                 <div style="color: white; text-align: center;">Espace personnel</div>
                 <ul class="nave_personnal_page">
                     <li><a id="menu_1" onclick="show_password()" class="button_change_info button_change_info_selected">Changer le mot de passe</a></li>
@@ -36,7 +36,7 @@
                     <li><a id="menu_4" onclick="show_more()" class="button_change_info">À propos</a></li>
                 </ul>
                 
-                <form class="form_change_style">
+                <form class="form_change_style" id="form_change" style="transition:0.7s;">
                     <table id="password_form" style="width:100%">
                         <tr>
                             <td style="width:50%;"><label>Ancien mot de passe</label></td>
@@ -44,14 +44,19 @@
                         </tr>
                         <tr>
                             <td><input class="input_change_form" type="password" value="motdepasse"></td>
-                            <td><input class="input_change_form"type="password"></td>
+                            <td><input onchange="check_password()" id="new_pw_1" class="input_change_form" type="text"></td>
                         </tr>
                         <tr>
                             <td><label>Nouveau mot de passe</label></td>
-                            <td><label style="color: #6d6d6d;"><i class="fas fa-lightbulb"></i> Conseil : Une majuscule, un chiffre</label></td>
+                            <td><label id="advice" style="color: #6d6d6d; transition:0.5s;"><i class="fas fa-lightbulb"></i> Conseil : Au moins une majuscule, un chiffre</label>
+                            <div id="bar_container" style="width:95%; display:none;">
+                                <div class="full_bar" id="full_bar" style="transition:0.7s;"></div>
+                                <div class="empty_bar" id="empty_bar" style="transition:0.7s;"></div>
+                            </div> 
+                            </td>
                         </tr>
                         <tr>
-                            <td><input class="input_change_form"type="password"></td>
+                            <td><input id="new_pw_2" class="input_change_form" type="text"></td>
                             <td><input class="button_change_password" type="submit" value="Enregistrer"></td>
                         </tr>
                     </table>
@@ -129,48 +134,48 @@
                             <td>Maxime</td>
                             <td>BREVIERE</td>
                             <td><a href="mailto:maxime.breviere@isep.fr">maxime.breviere@isep.fr</a></td>
-                            <td>admin</td>
-                            <td><a class="upgrade_button" type="submit"><i class="fas fa-address-card"></i> UPGRADE</a></td>
+                            <td>Admin</td>
+                            <td><a class="upgrade_button" type="submit"><i class="fas fa-star"></i> DEBASE</a></td>
                         </tr>
                         
                         <tr>
                             <td>Arthur</td>
                             <td>ROUAIX</td>
                             <td><a href="mailto:arthur.rouaix@isep.fr">arthur.rouaix@isep.fr</a></td>
-                            <td>admin</td>
-                            <td><a class="upgrade_button" type="submit"><i class="fas fa-address-card"></i> UPGRADE</a></td>
+                            <td>Admin</td>
+                            <td><a class="upgrade_button" type="submit"><i class="fas fa-star"></i> DEBASE</a></td>
                         </tr>
                         
                         <tr>
                             <td>Julien</td>
                             <td>VEY</td>
                             <td><a href="mailto:julien.vey@isep.fr">julien.vey@isep.fr</a></td>
-                            <td>admin</td>
-                            <td><a class="upgrade_button" type="submit"><i class="fas fa-address-card"></i> UPGRADE</a></td>
+                            <td>Admin</td>
+                            <td><a class="upgrade_button" type="submit"><i class="fas fa-star"></i> DEBASE</a></td>
                         </tr>
                         
                         <tr>
                             <td>Guillaume</td>
                             <td>PASQUEREAU</td>
                             <td><a href="mailto:guillaume.pasquereau@isep.fr">guillaume.pasquereau@isep.fr</a></td>
-                            <td>admin</td>
-                            <td><a class="upgrade_button" type="submit"><i class="fas fa-address-card"></i> UPGRADE</a></td>
+                            <td>Admin</td>
+                            <td><a class="upgrade_button" type="submit"><i class="fas fa-star"></i> DEBASE</a></td>
                         </tr>
                         
                         <tr>
                             <td>Hugues</td>
                             <td>Vincey</td>
                             <td><a href="mailto:hugues.vincey@isep.fr">hugues.vincey@isep.fr</a></td>
-                            <td>admin</td>
-                            <td><a class="upgrade_button" type="submit"><i class="fas fa-address-card"></i> UPGRADE</a></td>
+                            <td>Admin</td>
+                            <td><a class="upgrade_button" type="submit"><i class="fas fa-star"></i> DEBASE</a></td>
                         </tr>
                         
                         <tr>
                             <td>Mathieu</td>
                             <td>Manceny</td>
                             <td><a href="mailto:mathieu.manceny@isep.fr">mathieu.manceny@isep.fr</a></td>
-                            <td>admin</td>
-                            <td><a class="upgrade_button" type="submit"><i class="fas fa-address-card"></i> UPGRADE</a></td>
+                            <td>Professeur</td>
+                            <td><a class="upgrade_button" type="submit"><i class="far fa-star"></i> UPGRADE</a></td>
                         </tr>
                     </table>
                     </form>
@@ -223,6 +228,9 @@ function show_legal()
         document.getElementById("legal").style.display = "block";
         document.getElementById("manage_admin").style.display = "none";
         
+        document.getElementById("coffee_img").style.width = "0%";
+        document.getElementById("form_change").style.height = "275px";
+        
         document.getElementById("menu_1").classList.remove("button_change_info_selected");
         document.getElementById("menu_2").classList.remove("button_change_info_selected");
         document.getElementById("menu_3").classList.add("button_change_info_selected");
@@ -235,6 +243,9 @@ function show_password()
         document.getElementById("more").style.display = "none";
         document.getElementById("legal").style.display = "none";
         document.getElementById("manage_admin").style.display = "none";
+        
+        document.getElementById("coffee_img").style.width = "30%";
+        document.getElementById("form_change").style.height = "137px";
         
         document.getElementById("menu_1").classList.add("button_change_info_selected");
         document.getElementById("menu_2").classList.remove("button_change_info_selected");
@@ -249,6 +260,9 @@ function show_more()
         document.getElementById("legal").style.display = "none";
         document.getElementById("manage_admin").style.display = "none";
         
+        document.getElementById("coffee_img").style.width = "30%";
+        document.getElementById("form_change").style.height = "137px";
+        
         document.getElementById("menu_1").classList.remove("button_change_info_selected");
         document.getElementById("menu_2").classList.remove("button_change_info_selected");
         document.getElementById("menu_3").classList.remove("button_change_info_selected");
@@ -262,11 +276,100 @@ function show_manage_admin()
         document.getElementById("legal").style.display = "none";
         document.getElementById("manage_admin").style.display = "table";
         
+        document.getElementById("coffee_img").style.width = "0%";
+        document.getElementById("form_change").style.height = "275px";
+        
         document.getElementById("menu_1").classList.remove("button_change_info_selected");
         document.getElementById("menu_2").classList.add("button_change_info_selected");
         document.getElementById("menu_3").classList.remove("button_change_info_selected");
         document.getElementById("menu_4").classList.remove("button_change_info_selected");
     }
 
+function check_password()
+    {
+        var pw1 = document.getElementById("new_pw_1").value;
+        var pw2 = document.getElementById("new_pw_2").value;
+        
+        var test = 0;
+        
+        if(pw1 != pw2)
+            {
+                document.getElementById("advice").style.color = "#ff5c6a";
+                document.getElementById("advice").innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i> Les mots de passes doivent être identiques";
+                document.getElementById("bar_container").style.display = "none";
+            }
+        else if (pw1 == "" || pw2 == "")
+            {
+                document.getElementById("advice").style.color = "#ff5c6a";
+                document.getElementById("advice").innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i> Les mots de passes ne peuvent être vides";
+                document.getElementById("bar_container").style.display = "none";
+            }
+        else if (pw1.length < 8 || pw2.length < 8)
+            {
+                document.getElementById("advice").style.color = "#ff5c6a";
+                document.getElementById("advice").innerHTML = "<i class=\"fas fa-exclamation-triangle\"></i> Au moins 8 caractères exigés";
+                document.getElementById("bar_container").style.display = "none";
+            }
+        else
+        {
+            if (pw1.length >= 24)
+                {
+                    test = test + 3;
+                }
+            else if (pw1.length > 16 && pw1.length < 24)
+                {
+                    test = test + 1;
+                }
+            
+            if(/[A-Z]/.test(pw1) == true)
+                {
+                    test = test + 1;
+                }
+            
+            if(/\d/.test(pw1) == true)
+               {
+                    test = test + 1;
+               }
+            
+            if(test < 1)
+                {
+                    document.getElementById("advice").style.color = "white";
+                    document.getElementById("advice").innerHTML = "<i class=\"fas fa-check-circle\"></i> Robustesse : Faible";
+                    
+                    document.getElementById("bar_container").style.display = "flex";
+                    document.getElementById("full_bar").style.width = "25%";
+                    document.getElementById("empty_bar").style.width = "75%";
+                    
+                }
+            else if (test == 1)
+                {
+                    document.getElementById("advice").style.color = "white";
+                    document.getElementById("advice").innerHTML = "<i class=\"fas fa-check-circle\"></i> Robustesse : Correcte";
+                    
+                    document.getElementById("bar_container").style.display = "flex";
+                    document.getElementById("full_bar").style.width = "50%";
+                    document.getElementById("empty_bar").style.width = "50%";
+                }
+            else if(test == 2)
+                {
+                    document.getElementById("advice").style.color = "white";
+                    document.getElementById("advice").innerHTML = "<i class=\"fas fa-check-circle\"></i> Robustesse : Forte";
+                    
+                    document.getElementById("bar_container").style.display = "flex";
+                    document.getElementById("full_bar").style.width = "75%";
+                    document.getElementById("empty_bar").style.width = "25%";
+                }
+            else if(test >= 3)
+                {
+                    document.getElementById("advice").style.color = "white";
+                    document.getElementById("advice").innerHTML = "<i class=\"fas fa-check-circle\"></i> Robustesse : Très forte";
+                    
+                    document.getElementById("bar_container").style.display = "flex";
+                    document.getElementById("full_bar").style.width = "100%";
+                    document.getElementById("empty_bar").style.width = "0%";
+                }
+        }
+        
+    }
 
 </script>
