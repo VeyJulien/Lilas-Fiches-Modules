@@ -19,6 +19,12 @@ a:visited
     color: #ff5c6a;
 }
 
+::selection 
+{
+    background-color: rgba(255, 92, 106,1);
+    color:white;
+}
+
 input
 {
     border:none;
@@ -1330,7 +1336,7 @@ input::-webkit-input-placeholder
 {
     margin-right: 20px;
     margin-left: -30px;
-    padding-top: 15px;
+    padding-top: 35px;
     color: #49494c;
     opacity: 0.5;
     cursor:pointer;
@@ -1351,6 +1357,7 @@ input::-webkit-input-placeholder
     opacity: 0.5;
     cursor:pointer;
     transition: 0.5s;
+    display:none;
 }
 
 .manage_field_icon_2:hover

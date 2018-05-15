@@ -37,11 +37,14 @@
                         <form method="get" action="menu.html">
                             <button class="edit_button"><i class="fas fa-undo"></i> Retour à la page d'accueil</button>
                         </form>
+                        <form>
+                            <button id="lines_button" type="button" onclick="hide_lines()" class="edit_button"><i class="fas fa-align-justify"></i> Masquer les lignes</button>
+                        </form>
                     </div>
                     
                     <div style="display:flex;">
                         <div class="marg_send">1<br>2<br>3<br>4<br>5<br>6</div>
-                        <textarea rows="6" onkeydown="return limitLines(this, event)" class="send_textarea" autofocus></textarea>
+                        <textarea rows="6" id="textarea_lines" onkeydown="return limitLines(this, event)" class="send_textarea" autofocus></textarea>
                     </div>
                 </div>
                 
@@ -55,7 +58,8 @@
                 <a href="menu.html" class="link_button"><li class="button_menu menu_select">Ma Page</li><span class="bullet_notif">1</span></a>
                 <a href="create_module.html" class="link_button"><li class="button_menu">Créer un module</li></a>
                 <a href="find.html" class="link_button"><li class="button_menu">Chercher un module</li></a>
-                <a href="create_template.html" class="link_button"><li class="button_menu">Créer un template</li></a>
+                <a href="create_template.html" class="link_button"><li class="button_menu">Gérer les champs</li></a>
+                <a href="modify_template.html" class="link_button"><li class="button_menu">Templates</li></a>
                 <a type="button" onclick="on()" class="link_button"><li class="button_menu" style="border-bottom:1px solid rgba(255,255,255,0.1);">Déconnexion</li></a>
             </ul>
             
@@ -80,4 +84,24 @@ function off() {
     document.getElementById("overlay").style.display = "none";
     document.getElementsByClassName("main_block")[0].style.filter = "blur(0px)";
 }
+</script>
+
+<script>
+
+function hide_lines()
+    {
+        if (document.getElementById("textarea_lines").style.background != "white")
+        {
+        document.getElementById("textarea_lines").style.background = "white";
+        document.getElementById("lines_button").innerHTML = "<i class=\"fas fa-align-justify\"></i> Afficher les lignes";
+        }
+        else
+        {
+            document.getElementById("textarea_lines").style.background = "linear-gradient(transparent, transparent 40px, #ededed 0px)";
+            document.getElementById("textarea_lines").style.backgroundSize = "30px 41px";
+            document.getElementById("textarea_lines").style.backgroundAttachment = "scroll";
+            document.getElementById("lines_button").innerHTML = "<i class=\"fas fa-align-justify\"></i> Masquer les lignes";
+        }
+    }
+
 </script>
